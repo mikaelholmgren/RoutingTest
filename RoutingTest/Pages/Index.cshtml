@@ -1,0 +1,10 @@
+﻿@page "{slug?}"
+@model IndexModel
+@{
+    ViewData["Title"] = Model.CurrentPage.Name;
+}
+
+<div class="text-center">
+    <h1 class="display-4">@ViewData["Title"]</h1>
+    <component type=@Model.CurrentPage.Component render-mode="Static" param-PageModel="Model.CurrentPage" />
+</div>
